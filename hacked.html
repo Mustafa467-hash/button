@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Clicker</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        #btn1 {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #btn1:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1">Click me</button>
+
+    <script>
+        document.getElementById('btn1').addEventListener('click', function() {
+            let originalText = this.innerText;
+            this.innerText = 'Hacked!';
+            this.style.backgroundColor = 'red';
+            setTimeout(() => {
+                alert('Warning: You got hacked!');
+                this.innerText = originalText;
+                this.style.backgroundColor = '#007bff';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
